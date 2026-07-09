@@ -1,0 +1,9 @@
+[opener]
+view_image = [
+    { run = 'qview "%s"', orphan = true, desc = "Open with qView" }
+]
+
+[open]
+prepend_rules = [
+    { mime = "image/*", use = "view_image" }
+]
