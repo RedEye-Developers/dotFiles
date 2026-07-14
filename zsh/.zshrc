@@ -16,7 +16,6 @@ alias fc='bat --color=always $(fzf -m --preview="bat --color=always {}")'
 # Keybindings: Use Right Arrow key to accept the auto-suggestion ghost text
 # bindkey '^[[C' forward-word
 bindkey -v
-
 # PROMPT='%F{#f38ba8}%n%f:%F{#cba6f7}%1~%f > '
 
 # Enable color support for ls
@@ -29,7 +28,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="$HOME/.dotnet:$HOME/.dotnet/tools:$HOME/Android/Sdk/platform-tools:$HOME/.nvm/versions/node/v24.18.0/bin:$HOME/DevTools:/usr/java/jre1.8.0_491/bin:$PATH"
+export PATH="$HOME/.dotnet:$HOME/.dotnet/tools:$HOME/Android/Sdk/platform-tools:$HOME/.nvm/versions/node/v24.18.0/bin:$HOME/DevTools:/usr/java/jre1.8.0_491/bin:$HOME/.local/bin:$PATH"
 export DOTNET_ROOT="$HOME/.dotnet"
 export DOTNET_ROOT_X64="$HOME/.dotnet"
 export XDG_CURRENT_DESKTOP=i3
@@ -47,3 +46,7 @@ function y() {
 	command rm -f -- "$tmp"
 }
 
+HISTFILE=~/.zsh_history # Where to save your command history
+HISTSIZE=10000 # How many commands to keep in the active terminal memory
+SAVEHIST=10000 # How many commands to actually save in the history file
+setopt INC_APPEND_HISTORY # Automatically write to the history file immediately after executing a command
