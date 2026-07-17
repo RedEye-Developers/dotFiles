@@ -28,11 +28,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="$HOME/.dotnet:$HOME/.dotnet/tools:$HOME/Android/Sdk/platform-tools:$HOME/.nvm/versions/node/v24.18.0/bin:$HOME/DevTools:/usr/java/jre1.8.0_491/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.dotnet:$HOME/.dotnet/tools:$HOME/DevTools:$PATH"
 export DOTNET_ROOT="$HOME/.dotnet"
 export DOTNET_ROOT_X64="$HOME/.dotnet"
 export XDG_CURRENT_DESKTOP=i3
-export JAVA_HOME="$HOME/Library/jdk"
 export KEYTIMEOUT=1
 
 eval "$(zoxide init zsh)"
