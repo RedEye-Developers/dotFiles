@@ -30,6 +30,10 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+# GNOME Keyring
+exec --no-startup-id dbus-update-activation-environment --all
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
@@ -219,6 +223,8 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 default_border pixel 1
 default_floating_border pixel 1
 hide_edge_borders smart
+focus_on_window_activation smart
 
 # class                 border background text indicator child_border
 client.focused          #cba6f7 #cba6f7 #ffffff #cba6f7 #cba6f7
+client.urgent           #2F343A #900000 #FFFFFF #900000 #900000
