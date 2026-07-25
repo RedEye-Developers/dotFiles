@@ -19,10 +19,10 @@ bindkey -v
 # PROMPT='%F{#f38ba8}%n%f:%F{#cba6f7}%1~%f > '
 
 # Enable color support for ls
-alias ls='ls --color=auto'
+alias ls='eza -l --color=always --icons=always'
 
 # Define custom colors: di = directory, fi = file
-export LS_COLORS="di=01;34:fi=00"
+# export LS_COLORS="di=01;34:fi=00"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
