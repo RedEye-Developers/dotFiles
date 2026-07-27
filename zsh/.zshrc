@@ -12,6 +12,7 @@ source <(fzf --zsh)
 alias f='fzf --preview="bat --color=always {}"'
 alias fe='nvim $(fzf -m --preview="bat --color=always {}")'
 alias fc='bat --color=always $(fzf -m --preview="bat --color=always {}")'
+alias cd='z'
 
 # Keybindings: Use Right Arrow key to accept the auto-suggestion ghost text
 # bindkey '^[[C' forward-word

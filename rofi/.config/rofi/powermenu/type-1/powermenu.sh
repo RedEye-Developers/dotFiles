@@ -95,8 +95,8 @@ $reboot)
   run_cmd --reboot
   ;;
 $lock)
-  if [[ -x '/usr/bin/betterlockscreen' ]]; then
-    betterlockscreen -l
+  if [[ -x "$HOME/.local/share/quickshell-lockscreen/lock.sh" ]]; then
+    "$HOME/.local/share/quickshell-lockscreen/lock.sh"
   elif [[ -x '/usr/bin/i3lock' ]]; then
     i3lock
   fi
