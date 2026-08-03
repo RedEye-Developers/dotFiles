@@ -1,10 +1,16 @@
 return {
   {
     "folke/snacks.nvim",
-    priority = 1000,
-    lazy = false,
-    opts = {
-      image = { enabled = false },
+    keys = {
+      { "<leader><space>", false },
+      { "<leader>ff", false },
+      {
+        "<C-p>",
+        function()
+          Snacks.picker.files()
+        end,
+        desc = "Find Files",
+      },
     },
   },
 }

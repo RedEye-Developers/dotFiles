@@ -1,23 +1,22 @@
 return {
   {
-    "folke/tokyonight.nvim",
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
     opts = {
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
+      color_overrides = {
+        mocha = {
+          base = "#000000",
+          mantle = "#000000",
+        },
       },
-      on_colors = function(colors)
-        colors.bg = "#000000"
-        colors.bg_dark = "#000000"
-        colors.bg_float = "#000000"
-      end,
     },
   },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "catppuccin-mocha",
     },
   },
 }
