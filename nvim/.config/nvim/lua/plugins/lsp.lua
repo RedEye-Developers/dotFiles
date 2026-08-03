@@ -1,7 +1,6 @@
 return {
   {
     "GustavEikaas/easy-dotnet.nvim",
-    enabled = false,
     event = "VeryLazy",
     dependencies = { "nvim-lua/plenary.nvim", "folke/snacks.nvim" },
     config = function()
@@ -9,6 +8,9 @@ return {
       dotnet.setup({
         auto_bootstrap_namespace = {
           type = "block_scoped",
+        },
+        lsp = {
+          preload_roslyn = false,
         },
       })
     end,
