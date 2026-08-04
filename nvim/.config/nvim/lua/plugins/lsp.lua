@@ -7,7 +7,7 @@ return {
       local dotnet = require("easy-dotnet")
       dotnet.setup({
         auto_bootstrap_namespace = {
-          type = "block_scoped",
+          type = "file_scoped",
         },
         lsp = {
           preload_roslyn = false,
