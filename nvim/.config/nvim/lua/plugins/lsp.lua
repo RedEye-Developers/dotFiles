@@ -1,6 +1,7 @@
 return {
   {
     "GustavEikaas/easy-dotnet.nvim",
+    enabled = true,
     event = "VeryLazy",
     dependencies = { "nvim-lua/plenary.nvim", "folke/snacks.nvim" },
     config = function()
@@ -16,10 +17,18 @@ return {
     end,
   },
   {
+    "seblyng/roslyn.nvim",
+    enabled = false,
+    opts = {
+      filewatching = "off",
+    },
+  },
+  {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
         harper_ls = {
+          enabled = false,
           settings = {
             ["harper-ls"] = {
               linters = {
