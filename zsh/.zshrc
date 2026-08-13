@@ -50,3 +50,5 @@ HISTFILE=~/.zsh_history # Where to save your command history
 HISTSIZE=10000 # How many commands to keep in the active terminal memory
 SAVEHIST=10000 # How many commands to actually save in the history file
 setopt INC_APPEND_HISTORY # Automatically write to the history file immediately after executing a command
+
+. "$HOME/.local/bin/env"
