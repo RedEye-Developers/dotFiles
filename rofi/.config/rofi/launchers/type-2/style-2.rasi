@@ -14,6 +14,7 @@ configuration {
     display-drun:               "";
     display-run:                "";
     display-window:             "";
+    display-emoji:              "󰱨 ";
 	drun-display-format:        "{name}";
 }
 

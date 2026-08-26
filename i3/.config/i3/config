@@ -75,6 +75,7 @@ bindsym $mod+q kill
 bindsym $mod+space exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
 bindsym $mod+Tab exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher_window.sh
 bindsym $mod+Shift+Escape exec --no-startup-id ~/.config/rofi/powermenu/type-1/powermenu.sh
+bindsym $mod+Alt_R exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher_emoji.sh
 
 # change focus
 bindsym $mod+j focus left
