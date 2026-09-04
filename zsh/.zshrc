@@ -17,6 +17,8 @@ alias cd='z'
 # Keybindings: Use Right Arrow key to accept the auto-suggestion ghost text
 # bindkey '^[[C' forward-word
 bindkey -v
+bindkey -M viins '^I' forward-word
+bindkey -M main '^I' forward-word
 # PROMPT='%F{#f38ba8}%n%f:%F{#cba6f7}%1~%f > '
 
 # Enable color support for ls
@@ -34,6 +36,10 @@ export DOTNET_ROOT="$HOME/.dotnet"
 export DOTNET_ROOT_X64="$HOME/.dotnet"
 export XDG_CURRENT_DESKTOP=i3
 export KEYTIMEOUT=1
+export AWS_ENDPOINT_URL=http://localhost:4566
+export AWS_ACCESS_KEY_ID=test
+export AWS_SECRET_ACCESS_KEY=test
+export AWS_DEFAULT_REGION=us-east-1
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
