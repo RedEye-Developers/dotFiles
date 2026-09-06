@@ -19,6 +19,8 @@ alias cd='z'
 bindkey -v
 bindkey -M viins '^I' forward-word
 bindkey -M main '^I' forward-word
+bindkey -M viins '^[ ' expand-or-complete
+bindkey -M main '^[ ' expand-or-complete
 # PROMPT='%F{#f38ba8}%n%f:%F{#cba6f7}%1~%f > '
 
 # Enable color support for ls
