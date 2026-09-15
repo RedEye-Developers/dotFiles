@@ -39,6 +39,7 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id nm-applet
 exec --no-startup-id picom
 exec --no-startup-id xbanish
+exec --no-startup-id greenclip daemon
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -76,6 +77,7 @@ bindsym $mod+space exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher
 bindsym $mod+Tab exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher_window.sh
 bindsym $mod+Shift+Escape exec --no-startup-id ~/.config/rofi/powermenu/type-1/powermenu.sh
 bindsym $mod+Alt_R exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher_emoji.sh
+bindsym $mod+c exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher_clipboard.sh
 
 # change focus
 bindsym $mod+j focus left

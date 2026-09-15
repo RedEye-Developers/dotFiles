@@ -9,9 +9,10 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun";
+	modi:                       "drun,clipboard";
     show-icons:                 true;
     display-drun:               "";
+    display-clipboard:          " ";
 	drun-display-format:        "{name}";
 }
 
@@ -25,7 +26,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       400px;
+    width:                       1000px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -91,7 +92,7 @@ entry {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       6;
+    lines:                       10;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
