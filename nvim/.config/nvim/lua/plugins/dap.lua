@@ -1,6 +1,7 @@
 return {
   {
     "mfussenegger/nvim-dap",
+    enabled = false,
     event = "VeryLazy",
     recommended = true,
     desc = "Debugging support. Requires language specific adapters to be configured. (see lang extras)",
@@ -138,6 +139,7 @@ return {
 
   {
     "rcarriga/nvim-dap-ui",
+    enabled = false,
     event = "VeryLazy",
     dependencies = { "nvim-neotest/nvim-nio" },
     keys = {

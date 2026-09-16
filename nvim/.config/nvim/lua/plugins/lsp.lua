@@ -1,7 +1,7 @@
 return {
   {
     "GustavEikaas/easy-dotnet.nvim",
-    enabled = true,
+    enabled = false,
     event = "VeryLazy",
     dependencies = { "nvim-lua/plenary.nvim", "folke/snacks.nvim" },
     config = function()
@@ -18,7 +18,7 @@ return {
   },
   {
     "seblyng/roslyn.nvim",
-    enabled = false,
+    enabled = true,
     opts = {
       filewatching = "off",
     },

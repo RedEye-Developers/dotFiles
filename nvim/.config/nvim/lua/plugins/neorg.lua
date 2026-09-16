@@ -13,6 +13,21 @@ return {
         load = {
           ["core.defaults"] = {},
           ["core.concealer"] = {}, -- We added this line!
+          ["core.presenter"] = {
+            config = {
+              zen_mode = "zen-mode",
+            },
+          },
+          ["core.dirman"] = {
+            config = {
+              workspaces = {
+                notes = "~/Documents/Neorg/notes",
+                projects = "~/Documents/Neorg/projects",
+                agenta = "~/Documents/Neorg/agenta",
+                learning = "~/Documents/Neorg/learning",
+              },
+            },
+          },
         },
       })
     end,

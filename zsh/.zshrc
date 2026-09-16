@@ -14,6 +14,9 @@ alias fe='nvim $(fzf -m --preview="bat --color=always {}")'
 alias fc='bat --color=always $(fzf -m --preview="bat --color=always {}")'
 alias cd='z'
 
+# Case-insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # Keybindings: Use Right Arrow key to accept the auto-suggestion ghost text
 # bindkey '^[[C' forward-word
 bindkey -v
@@ -42,6 +45,7 @@ export AWS_ENDPOINT_URL=http://localhost:4566
 export AWS_ACCESS_KEY_ID=test
 export AWS_SECRET_ACCESS_KEY=test
 export AWS_DEFAULT_REGION=us-east-1
+export _ZO_CASE=insensitive
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
