@@ -23,7 +23,6 @@ return {
               workspaces = {
                 notes = "~/Documents/Neorg/notes",
                 projects = "~/Documents/Neorg/projects",
-                agenta = "~/Documents/Neorg/agenta",
                 learning = "~/Documents/Neorg/learning",
               },
             },
