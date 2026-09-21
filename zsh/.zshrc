@@ -13,6 +13,8 @@ alias f='fzf --preview="bat --color=always {}"'
 alias fe='nvim $(fzf -m --preview="bat --color=always {}")'
 alias fc='bat --color=always $(fzf -m --preview="bat --color=always {}")'
 alias cd='z'
+alias q='exit'
+alias an='annotator'
 
 # Case-insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'

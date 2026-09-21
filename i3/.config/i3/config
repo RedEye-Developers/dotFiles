@@ -200,7 +200,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec_always feh --bg-scale ~/wallpapers/blue-arch.png
+exec_always feh --bg-scale /home/redeye/Pictures/Wallpapers/blue-arch.png
 
 exec_always --no-startup-id killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
