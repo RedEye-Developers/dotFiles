@@ -1,43 +1,54 @@
+### Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+### End of Zinit's installer chunk
+
+# Zsh Plugins
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light Aloxaf/fzf-tab
+
+zinit ice depth=1
+zinit light jeffreytse/zsh-vi-mode
+
+# Evals
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
+
+# Sources
+source <(fzf --zsh)
+
 # Initialize native Zsh completion system
 autoload -Uz compinit && compinit
 
-# Zsh styling for the completion menu (enables arrow-key navigation)
-zstyle ':completion:*' menu select
+# Stylings
+## fzf-tab Stylings
+zstyle ':completion:*:descriptions' format '[%d]'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+zstyle ':fzf-tab:*' switch-group '<' '>'
 
-# Source community plugins (Arch Linux paths)
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source <(fzf --zsh)
-
+# Alias
 alias f='fzf --preview="bat --color=always {}"'
 alias fe='nvim $(fzf -m --preview="bat --color=always {}")'
 alias fc='bat --color=always $(fzf -m --preview="bat --color=always {}")'
 alias cd='z'
 alias q='exit'
 alias an='annotator'
-
-# Case-insensitive completion
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-# Keybindings: Use Right Arrow key to accept the auto-suggestion ghost text
-# bindkey '^[[C' forward-word
-bindkey -v
-bindkey -M viins '^I' forward-word
-bindkey -M main '^I' forward-word
-bindkey -M viins '^[ ' expand-or-complete
-bindkey -M main '^[ ' expand-or-complete
-# PROMPT='%F{#f38ba8}%n%f:%F{#cba6f7}%1~%f > '
-
-# Enable color support for ls
 alias ls='eza -l --color=always --icons=always'
 
-# Define custom colors: di = directory, fi = file
-# export LS_COLORS="di=01;34:fi=00"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+# Exports
 export PATH="$HOME/.dotnet:$HOME/.dotnet/tools:$HOME/DevTools:$PATH"
 export DOTNET_ROOT="$HOME/.dotnet"
 export DOTNET_ROOT_X64="$HOME/.dotnet"
@@ -49,9 +60,14 @@ export AWS_SECRET_ACCESS_KEY=test
 export AWS_DEFAULT_REGION=us-east-1
 export _ZO_CASE=insensitive
 
-eval "$(zoxide init zsh)"
-eval "$(starship init zsh)"
+# ZshCmdHistory
+HISTFILE=~/.zsh_history # Where to save your command history
+HISTSIZE=10000 # How many commands to keep in the active terminal memory
+SAVEHIST=10000 # How many commands to actually save in the history file
+setopt INC_APPEND_HISTORY # Automatically write to the history file immediately after executing a command
 
+# CommandFunctions
+## Yazi-Navigation
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
@@ -59,10 +75,5 @@ function y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	command rm -f -- "$tmp"
 }
-
-HISTFILE=~/.zsh_history # Where to save your command history
-HISTSIZE=10000 # How many commands to keep in the active terminal memory
-SAVEHIST=10000 # How many commands to actually save in the history file
-setopt INC_APPEND_HISTORY # Automatically write to the history file immediately after executing a command
 
 . "$HOME/.local/bin/env"
