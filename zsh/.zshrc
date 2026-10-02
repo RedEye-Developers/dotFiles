@@ -59,6 +59,7 @@ export AWS_ACCESS_KEY_ID=test
 export AWS_SECRET_ACCESS_KEY=test
 export AWS_DEFAULT_REGION=us-east-1
 export _ZO_CASE=insensitive
+export EDITOR=nvim
 
 # ZshCmdHistory
 HISTFILE=~/.zsh_history # Where to save your command history
