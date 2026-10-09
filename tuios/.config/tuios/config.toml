@@ -642,4 +642,8 @@ height = 12
 corner = 'bottom-right'
 
 [dock]
+left = ['mode', 'workspaces', 'trail', 'tape']
+center = ['windows']
+right = ['notifications', 'copy-help', 'cpu', 'ram', 'clock']
+
 [dock.clock]
