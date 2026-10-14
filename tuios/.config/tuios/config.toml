@@ -131,7 +131,7 @@ preferred_shell = ''
 motion = 'full'
 modal_dim = 30
 whichkey_position = ''
-window_title_position = 'hidden'
+window_title_position = "top"
 hide_clock = false
 show_clock = false
 show_cpu = false
@@ -155,7 +155,7 @@ tiling_scheme = 'spiral'
 master_ratio = 50
 scroll_column_width = 55
 scroll_column_max = 90
-zoom_size = 95
+zoom_size = 98
 panel_padding = 2
 clock_format = '15:04:05'
 dim_unfocused = 0
@@ -642,8 +642,8 @@ height = 12
 corner = 'bottom-right'
 
 [dock]
-left = ['mode', 'workspaces', 'trail', 'tape']
+left = ["mode", "workspaces", "trail", "tape"]
 center = ['windows']
-right = ['notifications', 'copy-help', 'cpu', 'ram', 'clock']
+right = ["notifications", "copy-help", "cpu", "ram", "clock"]
 
 [dock.clock]
