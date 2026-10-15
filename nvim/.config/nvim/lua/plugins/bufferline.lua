@@ -15,4 +15,18 @@ return {
 			diagnostics = "nvim_lsp",
 		},
 	},
+	keys = {
+		{ "<A-,>", "<CMD>BufferLineMovePrev<CR>", mode = "n" },
+		{ "<A-.>", "<CMD>BufferLineMoveNext<CR>", mode = "n" },
+		{ "<A-0>", "<CMD>BufferLineGoToBuffer 0<CR>", mode = "n" },
+		{ "<A-1>", "<CMD>BufferLineGoToBuffer 1<CR>", mode = "n" },
+		{ "<A-2>", "<CMD>BufferLineGoToBuffer 2<CR>", mode = "n" },
+		{ "<A-3>", "<CMD>BufferLineGoToBuffer 3<CR>", mode = "n" },
+		{ "<A-4>", "<CMD>BufferLineGoToBuffer 4<CR>", mode = "n" },
+		{ "<A-5>", "<CMD>BufferLineGoToBuffer 5<CR>", mode = "n" },
+		{ "<A-6>", "<CMD>BufferLineGoToBuffer 6<CR>", mode = "n" },
+		{ "<A-7>", "<CMD>BufferLineGoToBuffer 7<CR>", mode = "n" },
+		{ "<A-8>", "<CMD>BufferLineGoToBuffer 8<CR>", mode = "n" },
+		{ "<A-9>", "<CMD>BufferLineGoToBuffer 9<CR>", mode = "n" },
+	},
 }
