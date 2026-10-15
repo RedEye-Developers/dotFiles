@@ -1,8 +1,9 @@
 return {
-  'nvim-treesitter/nvim-treesitter',
-  lazy = false,
-  build = ':TSUpdate',
-  config = function()
-    require('nvim-treesitter').install({'lua'})
-  end
+	"nvim-treesitter/nvim-treesitter",
+	branch = "main",
+	lazy = false,
+	build = ":TSUpdate",
+	config = function()
+		require("nvim-treesitter").install({ "lua" })
+	end,
 }
