@@ -2,6 +2,7 @@ return {
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
+		lazy = false,
 		priority = 1000,
 		opts = {
 			color_overrides = {
@@ -10,13 +11,7 @@ return {
 					mantle = "#000000",
 				},
 			},
-		},
-	},
-	{
-		"LazyVim/LazyVim",
-		lazy = false,
-		opts = {
-			colorscheme = "catppuccin-mocha",
+			vim.cmd.colorscheme("catppuccin"),
 		},
 	},
 }
