@@ -1,8 +1,8 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.opt.softtabstop = 2
 vim.opt.clipboard = "unnamedplus"
-vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = "bg" })
+vim.opt.fillchars = { eob = " " }
 
 require("config.lazy")
