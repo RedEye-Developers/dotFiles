@@ -1,14 +1,16 @@
 return {
 	{
 		"hrsh7th/cmp-nvim-lsp",
+		event = "InsertEnter",
 	},
 	{
 		"L3MON4D3/LuaSnip",
+		enabled = false,
 		dependencies = {
 			"rafamadriz/friendly-snippets",
 			"saadparwaiz1/cmp_luasnip",
 		},
-		lazy = false,
+		ft = "lua",
 		-- follow latest release.
 		version = "*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 		-- install jsregexp (optional!).
@@ -16,18 +18,18 @@ return {
 	},
 	{
 		"hrsh7th/nvim-cmp",
-		lazy = false,
+		event = "InsertEnter",
 		config = function()
 			local cmp = require("cmp")
-			require("luasnip.loaders.from_vscode").lazy_load()
+			-- require("luasnip.loaders.from_vscode").lazy_load()
 
 			cmp.setup({
-				snippet = {
-					-- REQUIRED - you must specify a snippet engine
-					expand = function(args)
-						require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
-					end,
-				},
+				-- snippet = {
+				-- REQUIRED - you must specify a snippet engine
+				-- expand = function(args)
+				-- require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
+				-- end,
+				-- },
 				window = {
 					completion = cmp.config.window.bordered(),
 					documentation = cmp.config.window.bordered(),

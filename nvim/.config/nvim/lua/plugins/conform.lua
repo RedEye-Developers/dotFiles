@@ -1,7 +1,5 @@
 return {
 	"stevearc/conform.nvim",
-	lazy = false,
-	event = { "BufWritePre" },
 	cmd = { "ConformInfo" },
 	keys = {
 		{
