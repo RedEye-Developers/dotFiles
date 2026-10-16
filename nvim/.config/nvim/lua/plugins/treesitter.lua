@@ -5,5 +5,5 @@ return {
 	build = ":TSUpdate",
 	config = function()
 		require("nvim-treesitter").install({ "lua" })
-	end,
+	end
 }

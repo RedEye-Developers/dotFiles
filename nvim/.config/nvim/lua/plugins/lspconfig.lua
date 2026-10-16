@@ -2,10 +2,37 @@ return {
 	"neovim/nvim-lspconfig",
 	config = function()
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		vim.lsp.config("lua_ls", {
+
+    local lua_ls = {
 			capabilities = capabilities,
-		})
+    }
+
+    local tailwindcss = {
+			capabilities = capabilities,
+      filetypes_include = { "razor" },
+      settings = {
+        tailwindCSS = {
+          includeLanguages = {
+            razor = "html",
+          },
+          experimental = {
+            configFile = "/home/redeye/DevProjects/DigitalVault/DigitalVault.Blazor/DigitalVault.Blazor/Styles/styles.css",
+          },
+        },
+      },
+    }
+
+    local typos_lsp = {
+      cmd = { "typos-lsp" },
+    }
+
+		vim.lsp.config("lua_ls", lua_ls)
+    vim.lsp.config("tailwindcss", tailwindcss)
+    vim.lsp.config("typos_lsp", typos_lsp)
+
 		vim.lsp.enable("lua_ls")
+    vim.lsp.enable("tailwindcss")
+    vim.lsp.enable("typos_lsp")
 	end,
 	keys = {
 		{
