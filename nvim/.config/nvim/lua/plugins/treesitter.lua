@@ -4,6 +4,8 @@ return {
 	lazy = false,
 	build = ":TSUpdate",
 	config = function()
-		require("nvim-treesitter").install({ "lua" })
+		local ts = require("nvim-treesitter")
+    local languages = { "lua", "vim", "markdown", "json", "xml", "yaml" }
+    ts.install(languages)
 	end
 }

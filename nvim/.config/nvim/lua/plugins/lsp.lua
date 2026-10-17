@@ -1,19 +1,5 @@
 return{
   {
-    "GustavEikaas/easy-dotnet.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "folke/snacks.nvim" },
-    enabled = false,
-    ft = { "cs", "razor" },
-    opts = {
-      auto_bootstrap_namespace = {
-        type = "file_scoped",
-      },
-      lsp = {
-        preload_roslyn = false,
-      },
-    },
-  },
-  {
     "seblyng/roslyn.nvim",
     enabled = true,
     ft = { "cs", "razor" },
