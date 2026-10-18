@@ -48,7 +48,7 @@ return {
     keys = {
       -- Select textobjects
       {
-        "am",
+        "af",
         function()
           require("nvim-treesitter-textobjects.select")
               .select_textobject("@function.outer", "textobjects")
@@ -57,7 +57,7 @@ return {
         desc = "Select around function",
       },
       {
-        "im",
+        "if",
         function()
           require("nvim-treesitter-textobjects.select")
               .select_textobject("@function.inner", "textobjects")
@@ -113,7 +113,7 @@ return {
 
       -- Move to textobjects
       {
-        "]m",
+        "]f",
         function()
           require("nvim-treesitter-textobjects.move")
               .goto_next_start("@function.outer", "textobjects")
@@ -122,7 +122,7 @@ return {
         desc = "Next function start",
       },
       {
-        "]]",
+        "]c",
         function()
           require("nvim-treesitter-textobjects.move")
               .goto_next_start("@class.outer", "textobjects")
@@ -131,7 +131,7 @@ return {
         desc = "Next class start",
       },
       {
-        "]o",
+        "]l",
         function()
           require("nvim-treesitter-textobjects.move")
               .goto_next_start({ "@loop.inner", "@loop.outer" }, "textobjects")
@@ -158,7 +158,7 @@ return {
         desc = "Next fold",
       },
       {
-        "]M",
+        "]F",
         function()
           require("nvim-treesitter-textobjects.move")
               .goto_next_end("@function.outer", "textobjects")
@@ -167,7 +167,7 @@ return {
         desc = "Next function end",
       },
       {
-        "][",
+        "]C",
         function()
           require("nvim-treesitter-textobjects.move")
               .goto_next_end("@class.outer", "textobjects")
@@ -176,7 +176,7 @@ return {
         desc = "Next class end",
       },
       {
-        "[m",
+        "[f",
         function()
           require("nvim-treesitter-textobjects.move")
               .goto_previous_start("@function.outer", "textobjects")
@@ -185,7 +185,7 @@ return {
         desc = "Previous function start",
       },
       {
-        "[[",
+        "[c",
         function()
           require("nvim-treesitter-textobjects.move")
               .goto_previous_start("@class.outer", "textobjects")
@@ -194,7 +194,7 @@ return {
         desc = "Previous class start",
       },
       {
-        "[M",
+        "[F",
         function()
           require("nvim-treesitter-textobjects.move")
               .goto_previous_end("@function.outer", "textobjects")
@@ -203,7 +203,7 @@ return {
         desc = "Previous function end",
       },
       {
-        "[]",
+        "[C",
         function()
           require("nvim-treesitter-textobjects.move")
               .goto_previous_end("@class.outer", "textobjects")
@@ -251,46 +251,46 @@ return {
       },
 
       -- Make f, F, t, T repeatable with ; and ,
-      {
-        "f",
-        function()
-          return require("nvim-treesitter-textobjects.repeatable_move")
-              .builtin_f_expr()
-        end,
-        mode = { "n", "x", "o" },
-        expr = true,
-        desc = "Find character forward",
-      },
-      {
-        "F",
-        function()
-          return require("nvim-treesitter-textobjects.repeatable_move")
-              .builtin_F_expr()
-        end,
-        mode = { "n", "x", "o" },
-        expr = true,
-        desc = "Find character backward",
-      },
-      {
-        "t",
-        function()
-          return require("nvim-treesitter-textobjects.repeatable_move")
-              .builtin_t_expr()
-        end,
-        mode = { "n", "x", "o" },
-        expr = true,
-        desc = "Till character forward",
-      },
-      {
-        "T",
-        function()
-          return require("nvim-treesitter-textobjects.repeatable_move")
-              .builtin_T_expr()
-        end,
-        mode = { "n", "x", "o" },
-        expr = true,
-        desc = "Till character backward",
-      },
+      -- {
+      --   "f",
+      --   function()
+      --     return require("nvim-treesitter-textobjects.repeatable_move")
+      --         .builtin_f_expr()
+      --   end,
+      --   mode = { "n", "x", "o" },
+      --   expr = true,
+      --   desc = "Find character forward",
+      -- },
+      -- {
+      --   "F",
+      --   function()
+      --     return require("nvim-treesitter-textobjects.repeatable_move")
+      --         .builtin_F_expr()
+      --   end,
+      --   mode = { "n", "x", "o" },
+      --   expr = true,
+      --   desc = "Find character backward",
+      -- },
+      -- {
+      --   "t",
+      --   function()
+      --     return require("nvim-treesitter-textobjects.repeatable_move")
+      --         .builtin_t_expr()
+      --   end,
+      --   mode = { "n", "x", "o" },
+      --   expr = true,
+      --   desc = "Till character forward",
+      -- },
+      -- {
+      --   "T",
+      --   function()
+      --     return require("nvim-treesitter-textobjects.repeatable_move")
+      --         .builtin_T_expr()
+      --   end,
+      --   mode = { "n", "x", "o" },
+      --   expr = true,
+      --   desc = "Till character backward",
+      -- },
 
       -- Custom repeat behavior
       {
