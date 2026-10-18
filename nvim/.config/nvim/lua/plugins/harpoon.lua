@@ -1,19 +1,67 @@
 return {
-    "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {},
-    keys = {
-      { "<leader>ha", function() require("harpoon"):list():add() end },
-      { "<leader>e", function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end },
+	"ThePrimeagen/harpoon",
+	branch = "harpoon2",
+	dependencies = { "nvim-lua/plenary.nvim" },
+	opts = {},
+	keys = {
+		{
+			"<leader>ha",
+			function()
+				require("harpoon"):list():add()
+			end,
+			desc = "Harpoon Add",
+		},
+		{
+			"<leader>ho",
+			function()
+				require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
+			end,
+			desc = "Harpoon Open",
+		},
 
-      { "h1", function() require("harpoon"):list():select(1) end },
-      { "h2", function() require("harpoon"):list():select(2) end },
-      { "h3", function() require("harpoon"):list():select(3) end },
-      { "h4", function() require("harpoon"):list():select(4) end },
+		{
+			"<leader>h1",
+			function()
+				require("harpoon"):list():select(1)
+			end,
+			desc = "Harpoon Nav Index-1",
+		},
+		{
+			"<leader>h2",
+			function()
+				require("harpoon"):list():select(2)
+			end,
+			desc = "Harpoon Nav Index-2",
+		},
+		{
+			"<leader>h3",
+			function()
+				require("harpoon"):list():select(3)
+			end,
+			desc = "Harpoon Nav Index-3",
+		},
+		{
+			"<leader>h4",
+			function()
+				require("harpoon"):list():select(4)
+			end,
+			desc = "Harpoon Nav Index-4",
+		},
 
-      -- Toggle previous & next buffers stored within Harpoon list
-      { "h,", function() require("harpoon"):list():prev() end },
-      { "h.", function() require("harpoon"):list():next() end },
-    }
+		-- Toggle previous & next buffers stored within Harpoon list
+		{
+			"<leader>hp",
+			function()
+				require("harpoon"):list():prev()
+			end,
+			desc = "Harpoon Nav Prev",
+		},
+		{
+			"<leader>hn",
+			function()
+				require("harpoon"):list():next()
+			end,
+			desc = "Harpoon Nav Next",
+		},
+	},
 }

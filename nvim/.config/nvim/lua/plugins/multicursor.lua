@@ -34,16 +34,16 @@ return {
   end,
   keys = {
     -- Add or skip cursor above/below the main cursor.
-    { "<A-up>",            function() require("multicursor-nvim").lineAddCursor(-1) end,    mode = { "n", "x" }, desc = "Add cursor above" },
-    { "<A-down>",          function() require("multicursor-nvim").lineAddCursor(1) end,     mode = { "n", "x" }, desc = "Add cursor below" },
+    { "<C-up>",            function() require("multicursor-nvim").lineAddCursor(-1) end,    mode = { "n", "x" }, desc = "Add cursor above" },
+    { "<C-down>",          function() require("multicursor-nvim").lineAddCursor(1) end,     mode = { "n", "x" }, desc = "Add cursor below" },
     { "<leader><up>",    function() require("multicursor-nvim").lineSkipCursor(-1) end,   mode = { "n", "x" }, desc = "Skip cursor above" },
     { "<leader><down>",  function() require("multicursor-nvim").lineSkipCursor(1) end,    mode = { "n", "x" }, desc = "Skip cursor below" },
 
     -- Add or skip cursors by matching word/selection.
-    { "<leader>n",       function() require("multicursor-nvim").matchAddCursor(1) end,    mode = { "n", "x" }, desc = "Add next matching cursor" },
-    { "<leader>s",       function() require("multicursor-nvim").matchSkipCursor(1) end,   mode = { "n", "x" }, desc = "Skip next matching cursor" },
-    { "<leader>N",       function() require("multicursor-nvim").matchAddCursor(-1) end,   mode = { "n", "x" }, desc = "Add previous matching cursor" },
-    { "<leader>S",       function() require("multicursor-nvim").matchSkipCursor(-1) end,  mode = { "n", "x" }, desc = "Skip previous matching cursor" },
+    -- { "<leader>n",       function() require("multicursor-nvim").matchAddCursor(1) end,    mode = { "n", "x" }, desc = "Add next matching cursor" },
+    -- { "<leader>s",       function() require("multicursor-nvim").matchSkipCursor(1) end,   mode = { "n", "x" }, desc = "Skip next matching cursor" },
+    -- { "<leader>N",       function() require("multicursor-nvim").matchAddCursor(-1) end,   mode = { "n", "x" }, desc = "Add previous matching cursor" },
+    -- { "<leader>S",       function() require("multicursor-nvim").matchSkipCursor(-1) end,  mode = { "n", "x" }, desc = "Skip previous matching cursor" },
 
     -- Add and remove cursors with Ctrl + left-click.
     { "<C-LeftMouse>",   function() require("multicursor-nvim").handleMouse() end,        mode = "n",          desc = "Handle multicursor mouse" },
@@ -51,6 +51,6 @@ return {
     { "<C-LeftRelease>", function() require("multicursor-nvim").handleMouseRelease() end, mode = "n",          desc = "Release multicursor" },
 
     -- Disable and enable cursors.
-    { "<C-q>",           function() require("multicursor-nvim").toggleCursor() end,       mode = { "n", "x" }, desc = "Toggle multicursors" },
+    { "<leader>mc",           function() require("multicursor-nvim").toggleCursor() end,       mode = { "n", "x" }, desc = "Toggle multicursors" },
   }
 }

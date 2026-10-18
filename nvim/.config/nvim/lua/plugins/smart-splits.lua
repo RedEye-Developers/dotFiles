@@ -17,7 +17,7 @@ return {
   keys = {
     -- Resize splits
     {
-      '<A-h>',
+      '<A-left>',
       function()
         require('smart-splits').resize_left()
       end,
@@ -25,7 +25,7 @@ return {
       desc = 'Resize left',
     },
     {
-      '<A-j>',
+      '<A-down>',
       function()
         require('smart-splits').resize_down()
       end,
@@ -33,7 +33,7 @@ return {
       desc = 'Resize down',
     },
     {
-      '<A-k>',
+      '<A-up>',
       function()
         require('smart-splits').resize_up()
       end,
@@ -41,7 +41,7 @@ return {
       desc = 'Resize up',
     },
     {
-      '<A-l>',
+      '<A-right>',
       function()
         require('smart-splits').resize_right()
       end,
