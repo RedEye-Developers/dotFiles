@@ -2,8 +2,8 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     branch = "main",
-    lazy = false,
     build = ":TSUpdate",
+    lazy = false,
     config = function()
       local ts = require("nvim-treesitter")
       local languages = {
@@ -21,7 +21,6 @@ return {
         "javascript",
         "typescript",
         "regex",
-        "norg",
         "tsx"
       }
       ts.install(languages)

@@ -6,7 +6,7 @@ return {
     'rafamadriz/friendly-snippets',
     'L3MON4D3/LuaSnip',
   },
-  lazy = false,
+  event = "InsertEnter",
   build = function()
     require('blink.cmp').build():pwait()
   end,

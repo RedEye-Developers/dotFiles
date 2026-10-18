@@ -1,10 +1,5 @@
 return {
   'smart-splits-nvim/smart-splits.nvim',
-  opts = { -- Plugin Configuration
-    mux = {
-      backend = 'smart-splits-backend-kitty',
-    },
-  },
   dependencies = {
     {
       'smart-splits-nvim/backend-kitty',
@@ -14,6 +9,11 @@ return {
       },
     },
   },
+  opts = { -- Plugin Configuration
+    mux = {
+      backend = 'smart-splits-backend-kitty',
+    },
+  },
   keys = {
     -- Resize splits
     {
@@ -21,7 +21,7 @@ return {
       function()
         require('smart-splits').resize_left()
       end,
-      mode = {"n", "t"},
+      mode = { "n", "t" },
       desc = 'Resize left',
     },
     {
@@ -29,7 +29,7 @@ return {
       function()
         require('smart-splits').resize_down()
       end,
-      mode = {"n", "t"},
+      mode = { "n", "t" },
       desc = 'Resize down',
     },
     {
@@ -37,7 +37,7 @@ return {
       function()
         require('smart-splits').resize_up()
       end,
-      mode = {"n", "t"},
+      mode = { "n", "t" },
       desc = 'Resize up',
     },
     {
@@ -45,7 +45,7 @@ return {
       function()
         require('smart-splits').resize_right()
       end,
-      mode = {"n", "t"},
+      mode = { "n", "t" },
       desc = 'Resize right',
     },
     -- Move between splits
@@ -54,7 +54,7 @@ return {
       function()
         require('smart-splits').move_cursor_left()
       end,
-      mode = {"n", "t"},
+      mode = { "n", "t" },
       desc = 'Move left',
     },
     {
@@ -62,7 +62,7 @@ return {
       function()
         require('smart-splits').move_cursor_down()
       end,
-      mode = {"n", "t"},
+      mode = { "n", "t" },
       desc = 'Move down',
     },
     {
@@ -70,7 +70,7 @@ return {
       function()
         require('smart-splits').move_cursor_up()
       end,
-      mode = {"n", "t"},
+      mode = { "n", "t" },
       desc = 'Move up',
     },
     {
@@ -78,7 +78,7 @@ return {
       function()
         require('smart-splits').move_cursor_right()
       end,
-      mode = {"n", "t"},
+      mode = { "n", "t" },
       desc = 'Move right',
     },
     -- Swap buffers
@@ -87,7 +87,7 @@ return {
       function()
         require('smart-splits').swap_buf_left()
       end,
-      mode = {"n", "t"},
+      mode = { "n", "t" },
       desc = 'Swap left',
     },
     {
@@ -95,7 +95,7 @@ return {
       function()
         require('smart-splits').swap_buf_down()
       end,
-      mode = {"n", "t"},
+      mode = { "n", "t" },
       desc = 'Swap down',
     },
     {
@@ -103,7 +103,7 @@ return {
       function()
         require('smart-splits').swap_buf_up()
       end,
-      mode = {"n", "t"},
+      mode = { "n", "t" },
       desc = 'Swap up',
     },
     {
@@ -111,7 +111,7 @@ return {
       function()
         require('smart-splits').swap_buf_right()
       end,
-      mode = {"n", "t"},
+      mode = { "n", "t" },
       desc = 'Swap right',
     },
   },
