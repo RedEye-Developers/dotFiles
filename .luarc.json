@@ -2,6 +2,7 @@
     "diagnostics.globals": [
         "vim",
         "cmp",
-        "LazyVim"
+        "LazyVim",
+        "set_tab_spacing"
     ]
 }

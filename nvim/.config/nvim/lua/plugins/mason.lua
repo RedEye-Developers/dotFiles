@@ -34,7 +34,6 @@ return {
 				"tailwindcss",
 				"html",
 				"ts_ls",
-				"roslyn_ls",
 			},
 		},
 	},
