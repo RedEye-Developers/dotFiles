@@ -22,7 +22,7 @@ return {
     { "<A-]>", "<CMD>BufferLineCycleNext<CR>",    mode = "n" },
     { "cpb",   "<CMD>BufferLinePickClose<CR>",    mode = "n" },
     { "cob",   "<CMD>BufferLineCloseOthers<CR>",  mode = "n" },
-    { "cb",    "<CMD>bd<CR>",                     mode = "n" },
+    { "ccb",    "<CMD>bd<CR>",                     mode = "n" },
     { "<A-0>", "<CMD>BufferLineGoToBuffer 0<CR>", mode = "n" },
     { "<A-1>", "<CMD>BufferLineGoToBuffer 1<CR>", mode = "n" },
     { "<A-2>", "<CMD>BufferLineGoToBuffer 2<CR>", mode = "n" },

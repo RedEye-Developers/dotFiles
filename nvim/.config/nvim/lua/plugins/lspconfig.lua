@@ -6,7 +6,6 @@ return {
 
     vim.lsp.config("tailwindcss", lsp_settings.tailwindcss)
     vim.lsp.config("typos_lsp", lsp_settings.typos)
-    vim.lsp.config("roslyn_ls", lsp_settings.roslyn)
 
     vim.lsp.enable("typos_lsp")
   end,

@@ -41,7 +41,7 @@ settings.roslyn = {
     },
     ["csharp|background_analysis"] = {
       dotnet_analyzer_diagnostics_scope = "openFiles",
-      dotnet_compiler_diagnostics_scope = "openFiles",
+      dotnet_compiler_diagnostics_scope = "fullSolution",
     },
     ["csharp|completion"] = {
       dotnet_provide_regex_completions = true,
