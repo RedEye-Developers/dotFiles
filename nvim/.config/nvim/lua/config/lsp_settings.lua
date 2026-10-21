@@ -40,7 +40,7 @@ settings.roslyn = {
       dotnet_enable_references_code_lens = true,
     },
     ["csharp|background_analysis"] = {
-      dotnet_analyzer_diagnostics_scope = "openFiles",
+      dotnet_analyzer_diagnostics_scope = "fullSolution",
       dotnet_compiler_diagnostics_scope = "fullSolution",
     },
     ["csharp|completion"] = {
