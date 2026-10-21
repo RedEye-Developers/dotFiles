@@ -1,10 +1,11 @@
 return {
   "folke/trouble.nvim",
+  branch = "main",
   opts = {}, -- for default options, refer to the configuration section for custom setup.
   cmd = "Trouble",
   keys = {
     {
-      "<c-m>",
+      "<C-m>",
       "<cmd>Trouble diagnostics toggle<cr>",
       desc = "Diagnostics (Trouble)",
     },

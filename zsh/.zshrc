@@ -61,6 +61,9 @@ export AWS_DEFAULT_REGION=us-east-1
 export _ZO_CASE=insensitive
 export EDITOR=nvim
 
+# nvim easy_dotnet
+ulimit -n 4096
+
 # ZshCmdHistory
 HISTFILE=~/.zsh_history # Where to save your command history
 HISTSIZE=10000 # How many commands to keep in the active terminal memory
