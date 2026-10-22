@@ -3,7 +3,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		branch = "main",
 		build = ":TSUpdate",
-		lazy = false,
+    lazy = false,
 		config = function()
 			local ts = require("nvim-treesitter")
 			local languages = {
@@ -23,6 +23,7 @@ return {
 				"typescript",
 				"regex",
 				"tsx",
+        "sql"
 			}
 			ts.install(languages)
 
