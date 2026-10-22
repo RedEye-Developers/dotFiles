@@ -1,6 +1,7 @@
 return {
 	"GustavEikaas/easy-dotnet.nvim",
 	dependencies = { "nvim-lua/plenary.nvim", "folke/snacks.nvim" },
+  enabled = true,
   ft = { "cs", "razor" },
 	opts = {
 		lsp = {
@@ -13,7 +14,8 @@ return {
 			},
 		},
 		auto_bootstrap_namespace = {
+      enabled = true,
 			type = "file_scoped",
 		},
-	},
+  },
 }
