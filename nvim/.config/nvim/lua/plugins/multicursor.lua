@@ -34,8 +34,8 @@ return {
   end,
   keys = {
     -- Add or skip cursor above/below the main cursor.
-    { "<C-up>",            function() require("multicursor-nvim").lineAddCursor(-1) end,    mode = { "n", "x" }, desc = "Add cursor above" },
-    { "<C-down>",          function() require("multicursor-nvim").lineAddCursor(1) end,     mode = { "n", "x" }, desc = "Add cursor below" },
+    { "<C-S-up>",            function() require("multicursor-nvim").lineAddCursor(-1) end,    mode = { "n", "x" }, desc = "Add cursor above" },
+    { "<C-S-down>",          function() require("multicursor-nvim").lineAddCursor(1) end,     mode = { "n", "x" }, desc = "Add cursor below" },
     { "<leader><up>",    function() require("multicursor-nvim").lineSkipCursor(-1) end,   mode = { "n", "x" }, desc = "Skip cursor above" },
     { "<leader><down>",  function() require("multicursor-nvim").lineSkipCursor(1) end,    mode = { "n", "x" }, desc = "Skip cursor below" },
 

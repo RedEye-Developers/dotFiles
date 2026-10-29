@@ -50,7 +50,7 @@ return {
 		keys = {
 			-- Select textobjects
 			{
-				"af",
+				"am",
 				function()
 					require("nvim-treesitter-textobjects.select").select_textobject("@function.outer", "textobjects")
 				end,
@@ -58,7 +58,7 @@ return {
 				desc = "Select around function",
 			},
 			{
-				"if",
+				"im",
 				function()
 					require("nvim-treesitter-textobjects.select").select_textobject("@function.inner", "textobjects")
 				end,
@@ -108,7 +108,7 @@ return {
 
 			-- Move to textobjects
 			{
-				"]f",
+				"]m",
 				function()
 					require("nvim-treesitter-textobjects.move").goto_next_start("@function.outer", "textobjects")
 				end,
@@ -151,7 +151,7 @@ return {
 				desc = "Next fold",
 			},
 			{
-				"]F",
+				"]M",
 				function()
 					require("nvim-treesitter-textobjects.move").goto_next_end("@function.outer", "textobjects")
 				end,
@@ -167,7 +167,7 @@ return {
 				desc = "Next class end",
 			},
 			{
-				"[f",
+				"[m",
 				function()
 					require("nvim-treesitter-textobjects.move").goto_previous_start("@function.outer", "textobjects")
 				end,
@@ -183,7 +183,7 @@ return {
 				desc = "Previous class start",
 			},
 			{
-				"[F",
+				"[M",
 				function()
 					require("nvim-treesitter-textobjects.move").goto_previous_end("@function.outer", "textobjects")
 				end,
